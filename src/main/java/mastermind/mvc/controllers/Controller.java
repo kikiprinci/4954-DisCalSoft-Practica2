@@ -46,5 +46,4 @@ public abstract class Controller {
     public boolean isMaxAttemp() {
         return this.game.isMaxAttemp();
     }
-    
 }

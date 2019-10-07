@@ -16,6 +16,13 @@ public class ResultCombinationView {
         return new YesNoDialog().read();
     }
 
+    public boolean resumeGame() {
+        boolean resumed;
+		Message.RESUME.write();
+		resumed = new YesNoDialog().read();
+		return resumed;
+    }
+
     public void Writeln() {
         Message.ATTEMPTS.writeln(this.controller.getAttemptsByGame());
         new SecretCombinationView(this.controller).writeln();

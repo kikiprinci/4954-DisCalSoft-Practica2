@@ -30,16 +30,14 @@ public class ConsoleView extends View {
         ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombinationController);
         ProposedCombination proposedCombination;
 
-        do  {
-            proposedCombinationView.writeln();
-            proposedCombination = new ProposedCombination(proposedCombinationView.read());
-            proposedCombinationController.addProposedCombination(proposedCombination);
-            proposedCombinationController.addResult(proposedCombination);
-            //
-        } while (proposedCombination.hasError());
-
+        do {
+            do {
+                proposedCombinationView.writeln();
+                proposedCombination = new ProposedCombination(proposedCombinationView.read());
+                proposedCombinationController.addProposedCombination(proposedCombination);
+                proposedCombinationController.addResult(proposedCombination);
+            } while (!proposedCombinationController.isFinished());
+        } while (!resultCombinationView.resumeGame());
     }
-
-    
 
 }

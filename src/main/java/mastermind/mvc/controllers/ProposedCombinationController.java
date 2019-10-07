@@ -18,6 +18,10 @@ public class ProposedCombinationController extends Controller {
         this.game.getResults().add(this.game.getResult(proposedCombination));
     }
 
+    public boolean isFinished(){
+        return this.game.isFinished();
+    }
+
     @Override
     public void accept(ControllerVisitor controllerVisitor) {
         controllerVisitor.visit(this);
