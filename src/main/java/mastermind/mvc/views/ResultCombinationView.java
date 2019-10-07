@@ -23,7 +23,7 @@ public class ResultCombinationView {
 		return resumed;
     }
 
-    public void Writeln() {
+    public void writeln() {
         Message.ATTEMPTS.writeln(this.controller.getAttemptsByGame());
         new SecretCombinationView(this.controller).writeln();
         ProposedCombinationView proposeCombinationView = new ProposedCombinationView(this.controller);

@@ -34,7 +34,7 @@ public abstract class Controller {
         return this.game.getAttemps();
     }
 
-    public Result getResultProposeCombination(int index) {
+    public Result getResultProposedCombination(int index) {
         List<Result> lstResults = this.game.getResults();
         return lstResults.get(index);
     }

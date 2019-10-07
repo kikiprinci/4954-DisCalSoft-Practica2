@@ -65,7 +65,7 @@ public class ProposedCombinationView {
             color.write();
         }
 
-        Result result = this.controller.getResultProposeCombination(attemp);
+        Result result = this.controller.getResultProposedCombination(attemp);
         Message.RESULT.writeln(result.getBlacks(), result.getWhites());
     }
 }
